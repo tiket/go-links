@@ -28,6 +28,10 @@ class RedirectHandler(NoLoginRequiredHandler):
     shortpath = '/'.join([shortpath_parts[0].lower()] + shortpath_parts[1:])
 
     if not self.user_email:
+      self.user_email = 'open@itso.io'
+      self.user_org = 'itso.io'
+
+    if not self.user_email:
       if shortpath == 'welcome' or shortpath == 'trotto-welcome':
         WALKTHROUGH_SAMPLE_DOC = 'https://docs.google.com/document/d/1B-M6yw-mqEl9U2cc2VKIwvOF_jCSrGByga9k7z4sxBQ/edit'
         self.redirect(WALKTHROUGH_SAMPLE_DOC)
