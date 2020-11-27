@@ -71,7 +71,7 @@ export function setLinkCreationMessage(messageType, html, tootsLink) {
   return function (dispatch, getState) {
     html = !getState().core.get('goSupportedInCurrentSession')
         ? html
-        : html.replace('https://trot.to/', 'http://go/').replace('trot.to/', 'go/');
+        : html.replace('https://trot.to/', 'http://' + location.host + '/').replace('trot.to/', location.host+'/');
 
     dispatch({
       type: 'SET_LINK_CREATION_MESSAGE',
@@ -125,16 +125,16 @@ export function receiveSaveResult(responseJson) {
 
       dispatch(setLinkCreatedOnThisPageload(responseJson));
 
-      var host = 'http://go';
+      var host = 'http://' + location.host;
 
       if (!getState().core.get('goSupportedInCurrentSession')) {
-        host = host.replace('http://go', getServiceBaseUrl());
+        host = host.replace('http://'+location.host, getServiceBaseUrl());
       }
 
       dispatch(setLinkCreationMessage(
           'good_news',
           'Success! New go link created:',
-          'http://go/' + responseJson.shortpath
+          location.host+'/' + responseJson.shortpath
       ));
     }
   }

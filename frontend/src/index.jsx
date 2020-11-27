@@ -48,7 +48,7 @@ if (queryParams.r) {
 
   history.replaceState({}, '', '/');
 
-  store.dispatch(setLinkCreationMessage('error', '"go/' + shortpath + '" doesn\'t exist yet. You can create it now!'));
+  store.dispatch(setLinkCreationMessage('error', location.host+'/' + shortpath + '" doesn\'t exist yet. You can create it now!'));
 } else if (queryParams.transfer) {
   history.replaceState({}, '', '/');
 

@@ -271,7 +271,7 @@ const CompleteTransferModal = connect(
   const message = (
       <div style={{marginBottom: '10px'}}>
         Would you like to take ownership of
-        of <span style={{fontWeight:'bold'}}>go/{link.get('shortpath')}</span>?
+        of <span style={{fontWeight:'bold'}}>{location.host}/{link.get('shortpath')}</span>?
       </div>
   );
 
