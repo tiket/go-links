@@ -144,7 +144,7 @@ const DeletionModal = connect(
   const [confirmed, setConfirmed] = useState(false);
 
   let link = linksById.get(linkId);
-  link = link.set('shortpath', `go/${link.get('shortpath')}`);
+  link = link.set('shortpath', location.host + `/${link.get('shortpath')}`);
 
   const message = (
       <div>
@@ -199,7 +199,7 @@ const InitTransferModal = connect(
   }
 
   let link = linksById.get(linkId);
-  link = link.set('shortpath', `go/${link.get('shortpath')}`);
+  link = link.set('shortpath', `${location.host}/${link.get('shortpath')}`);
 
   const onCopy = () => {
     setJustCopied(true);
