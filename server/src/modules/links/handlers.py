@@ -208,12 +208,12 @@ def use_transfer_link(transfer_link_token):
 
     owner_from_token = user_helpers.get_user_by_id(payload['o'])
     if not owner_from_token or link.owner != owner_from_token.email:
-      user_facing_error = f'The owner of {location.host}/{link.shortpath} has changed since your transfer link was created'
+      user_facing_error = f'The owner of go/{link.shortpath} has changed since your transfer link was created'
 
       raise InvalidTransferToken('Owner from token does not match current owner')
 
     if not check_mutate_authorization(link_id, payload['by']):
-      user_facing_error = f'The user who created your transfer link no longer has edit rights for {location.host}/{link.shortpath}'
+      user_facing_error = f'The user who created your transfer link no longer has edit rights for go/{link.shortpath}'
 
       raise InvalidTransferToken('Token from unauthorized user')
 
