@@ -125,11 +125,11 @@ export class LinkForm extends React.Component {
         <div className="container" id="link-form">
           {'/create' !== this.props.location.pathname ? null : <NewUserIntroContainer />}
           <div className="row">
-            <div className="col-md-3 col-md-offset-2">
+            <div className="col-md-4 col-md-offset-1">
               <div style={{width: '100%', display: 'flex', alignItems: 'center'}}>
                  <div style={{paddingRight: '5px'}}>
                    <div>
-                     go/
+                   {location.host}/
                    </div>
                  </div>
                  <input
@@ -147,7 +147,7 @@ export class LinkForm extends React.Component {
             <div className="col-md-1 text-center" style={{height: '34px', lineHeight: '34px'}}>
                 <b>&#8594;</b>
             </div>
-            <div className="col-md-4">
+            <div className="col-md-5">
                 <div style={{width: '100%', display: 'flex'}}>
                   <input
                      className="form-control"
@@ -163,7 +163,7 @@ export class LinkForm extends React.Component {
             </div>
           </div>
           <div className="row">
-            <div className="col-md-8 col-md-offset-2"
+            <div className="col-md-10 col-md-offset-1"
                  style={{marginTop: '10px', display: 'flex', flexDirection: 'column', alignItems: 'flex-start'}}>
               <div style={{width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-evenly'}}>
                 <div style={{display: 'flex', alignItems: 'baseline', flexWrap: 'wrap', flexGrow: '1'}}>

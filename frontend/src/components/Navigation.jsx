@@ -54,7 +54,7 @@ export class NavBar extends React.Component {
     return (
          <div className="container" style={{marginTop: '10px', marginBottom: '80px'}}>
           <div className="row">
-            <div className="col-md-8 col-md-offset-2">
+            <div className="col-md-10 col-md-offset-1">
               <div style={{width: '100%', display: 'flex', justifyContent: 'space-between'}}>
                 <a className="unstyled-link" href="#/">
                   <div style={{display: 'flex', alignItems: 'center'}}>

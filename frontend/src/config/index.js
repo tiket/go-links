@@ -16,7 +16,7 @@ const DEFAULT_CONFIG = {
   header: {
     title: 'Trotto',
     logo: {
-      url: '/_images/snout.png',
+      url: '/_images/tiket.png',
       css: {
         height: '1.6em'
       }
