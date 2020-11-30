@@ -10,11 +10,11 @@ const DEFAULT_CONFIG = {
     error: '#ff0033'
   },
   page: {
-    title: 'Trotto Go Links',
+    title: 'Tiket Shortlinks',
     favicon: '/favicon.ico'
   },
   header: {
-    title: 'Trotto',
+    title: 'Tiket Shortlinks',
     logo: {
       url: '/_images/tiket.png',
       css: {
@@ -36,12 +36,12 @@ const DEFAULT_NAV_ITEMS = {
   directory: {
     text: 'Directory',
     url: '#/directory'
-  },
-  howItWorks: {
-    text: 'How It Works',
-    url: 'https://www.trot.to/how-it-works',
-    openInNewTab: true
   }
+  // howItWorks: {
+  //   text: 'How It Works',
+  //   url: 'https://www.trot.to/how-it-works',
+  //   openInNewTab: true
+  // }
 };
 
 let config = fromJS(DEFAULT_CONFIG).mergeDeep(fromJS(CUSTOM_CONFIG));
