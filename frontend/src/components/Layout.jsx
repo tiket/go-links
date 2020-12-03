@@ -49,14 +49,7 @@ export class MainLayout extends React.Component {
             <div className="row">
               <div className="col-md-4 col-md-offset-2" style={{paddingTop: '10px', paddingBottom: '10px'}}>
                 <div style={{display: 'flex', maxWidth: '400px'}}>
-                  {getConfig('footer.showSourceLink') && (
-                    <a style={{marginRight: '10px'}}
-                       href="https://github.com/trotto/go-links"
-                       target="_blank"
-                    >
-                      <img height="25" src="/_images/octocat.png" />
-                    </a>
-                  )}
+                  {getConfig('footer.showSourceLink')}
                   {getConfig('footer.links').map((item, index) =>
                     <a key={index}
                        href={item.get('url')}
