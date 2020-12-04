@@ -125,10 +125,10 @@ export function receiveSaveResult(responseJson) {
 
       dispatch(setLinkCreatedOnThisPageload(responseJson));
 
-      var host = 'http://' + location.host;
+      var host = 'http://';
 
       if (!getState().core.get('goSupportedInCurrentSession')) {
-        host = host.replace('http://'+location.host, getServiceBaseUrl());
+        host = host.replace('http://', getServiceBaseUrl());
       }
 
       dispatch(setLinkCreationMessage(
