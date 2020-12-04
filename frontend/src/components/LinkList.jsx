@@ -203,11 +203,12 @@ class KeywordCell extends React.Component {
     const row = this.props.row;
 
     var shortlink = 'http://' + row.value;
-
-    if (!this.props.goSupportedInCurrentSession) {
-      shortlink = shortlink.replace('http://go', getServiceBaseUrl());
-    }
-
+    
+    // if (!this.props.goSupportedInCurrentSession) {
+    //   console.log("shortlink masuk if : " + shortlink)
+    //   shortlink = shortlink.replace('http://', getServiceBaseUrl());
+    // }
+    
     return (
          <div
              style={{display: 'flex', width: '100%', alignItems: 'center', justifyContent: 'space-between'}}
